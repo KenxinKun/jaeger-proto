@@ -18,7 +18,7 @@
 // 	protoc        (unknown)
 // source: jaeger/v3/query_service.proto
 
-package api_v3
+package jaegerv3
 
 import (
 	v1 "go.opentelemetry.io/proto/otlp/trace/v1"

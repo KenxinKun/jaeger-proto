@@ -11,10 +11,10 @@ plugins:
     out: internal/proto
     opt:
       - paths=source_relative
-      - Mjaeger/v3/query_service.proto=api/v3
+      - Mjaeger/v3/query_service.proto=api/v3;jaegerv3
   - remote: buf.build/grpc/go
     include_imports: false
     out: internal/proto
     opt:
       - paths=source_relative
-      - Mjaeger/v3/query_service.proto=api/v3
+      - Mjaeger/v3/query_service.proto=api/v3;jaegerv3
