@@ -1,0 +1,20 @@
+version: v2
+clean: true
+inputs:
+  - directory: api
+  # - git_repo: https://github.com/jaegertracing/jaeger-idl
+  #   branch: main
+  #   subdir: proto/api_v3
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    include_imports: false
+    out: internal/proto
+    opt:
+      - paths=source_relative
+      - Mjaeger/v3/query_service.proto=api/v3
+  - remote: buf.build/grpc/go
+    include_imports: false
+    out: internal/proto
+    opt:
+      - paths=source_relative
+      - Mjaeger/v3/query_service.proto=api/v3
